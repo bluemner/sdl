@@ -17,7 +17,7 @@ SDL_GLContext glContext;
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
-
+const char* TITLE = "Lesson 01";
 int main ( int argc, char * args[] );
 int init ();
 int initGL ();
@@ -68,7 +68,7 @@ int init()
 				videoFlags |= SDL_WINDOW_SHOWN; 		    
 				videoFlags |= SDL_WINDOW_RESIZABLE;  
 				     
-		WINDOW = SDL_CreateWindow( "SDL Lesson 01", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+		WINDOW = SDL_CreateWindow( TITLE, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
 		                           SCREEN_WIDTH, SCREEN_HEIGHT, videoFlags );
 		if( WINDOW == NULL )
 		{
