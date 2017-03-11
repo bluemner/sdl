@@ -3,6 +3,7 @@
 	"files.associations": {
 		"*.cl": "c",
 		"*.tpl": "html",
-		"xlocale": "cpp"
+		"xlocale": "cpp",
+		"iosfwd": "cpp"
 	}
 }

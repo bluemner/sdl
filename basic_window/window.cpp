@@ -1,3 +1,4 @@
+//Test to see if sdl 2 is working...
 #define SDL_MAIN_HANDLED
 #include <SDL2/SDL.h>
 #include <iostream>
@@ -14,7 +15,7 @@ int main(int argc , char* args[])
 			std::cout<< "Window error" << SDL_GetError() << std::endl;
 		}else{
 			SDL_UpdateWindowSurface(window);
-			SDL_Delay(2000);
+			SDL_Delay(5000);
 		}
 	}
 

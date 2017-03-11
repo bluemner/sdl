@@ -21,7 +21,7 @@ set file=graph
 echo building %file%
 set folder=graph
 set linkerflags=/OUT:bin\%file%.exe
-cl.exe %compilerflags% %folder%/%file%.cpp /I%include_sdl%  /I%include_open_gl% /DYNAMICBASE SDL2.lib OpenGL32.lib GLU32.lib  /link /LIBPATH:%lib_sdl% /LIBPATH:%lib_open_gl%  %linkerflags% /SUBSYSTEM:WINDOWS /ENTRY:"mainCRTStartup"
+cl.exe %compilerflags% %folder%/%file%.cpp /I%include_sdl%  /I%include_open_gl% /DYNAMICBASE SDL2.lib OpenGL32.lib GLU32.lib /link /LIBPATH:%lib_sdl% /LIBPATH:%lib_open_gl%  %linkerflags% /SUBSYSTEM:WINDOWS /ENTRY:"mainCRTStartup"
 
 REM
 REM
@@ -31,5 +31,5 @@ set file=window
 echo building %file%
 
 set linkerflags=/OUT:bin\%file%.exe
-cl.exe %compilerflags%  basic_window/%file%.cpp /I%include_open_gl% /I%include_sdl% /DYNAMICBASE GLU32.lib SDL2.lib /link /LIBPATH:%lib_open_gl% /LIBPATH:%lib_sdl% %linkerflags% /SUBSYSTEM:CONSOLE
+cl.exe %compilerflags%  basic_window/%file%.cpp /I%include_open_gl% /I%include_sdl% /DYNAMICBASE GLU32.lib SDL2.lib /link /LIBPATH:%lib_open_gl% /LIBPATH:%lib_sdl% %linkerflags% /SUBSYSTEM:WINDOWS /ENTRY:"mainCRTStartup"
 echo done
