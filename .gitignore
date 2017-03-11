@@ -7,7 +7,7 @@ bin/
 *.obj
 *.elf
 
-# Precompiled Headers
+# Pre-compiled Headers
 *.gch
 *.pch
 
@@ -23,7 +23,7 @@ bin/
 *.so.*
 *.dylib
 
-# Executables
+# Executable
 *.exe
 *.out
 *.app
@@ -33,3 +33,5 @@ bin/
 
 # Debug files
 *.dSYM/
+
+*.pdb

@@ -4,13 +4,23 @@
 // Description : Basic SDL 2.0 Implimentation
 // LICENSE : MIT
 // =================================================
-#include <GL/glu.h>
+
+
+#ifdef _WIN32
+	#define SDL_MAIN_HANDLED
+	#include <Windows.h>
+	#include <GLU.h>
+	#include <GL/gl.h>
+#elif linux
+
+	#include <GL/glu.h>
+
+#endif
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_opengl.h>
-
 #include <stdio.h>
 #include <string.h>
-
 #include <string>
 
 #define PI 3.14159265359
@@ -322,7 +332,7 @@ void grid()
 	glColor3f(1.0, 0.0, 0.0);
 
 	/*grid*/
-	float GRIDE_SIZE = 10;
+	float GRIDE_SIZE = 100;
 	//X
 	glBegin(GL_LINES);
 		glVertex2f(-GRIDE_SIZE, 0);
